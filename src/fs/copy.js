@@ -4,8 +4,8 @@ import { __dirname, errorMessage, folderSourse } from './utils.js';
 
 const copy = async () => {
   const folderEnd = 'files_copy';
-  const folderSoursePath = path.join(__dirname, folderSourse);
   const folderEndPath = path.join(__dirname, folderEnd);
+  const folderSoursePath = path.join(__dirname, folderSourse);
 
   try {
     await mkdir(folderEndPath);
