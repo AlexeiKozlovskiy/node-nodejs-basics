@@ -1,13 +1,9 @@
-import { writeFile } from 'fs/promises';
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { writeFile } from 'node:fs/promises';
+import path from 'path';
+import { __dirname, errorMessage } from './utils.js';
 
 const create = async () => {
   const content = 'I am fresh and young';
-  const errorMessage = 'FS operation failed';
   const folderName = 'files';
   const fileName = 'fresh.txt';
   const folderPath = path.join(__dirname, folderName, fileName);
