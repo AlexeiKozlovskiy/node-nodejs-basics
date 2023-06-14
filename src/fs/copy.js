@@ -1,9 +1,8 @@
 import { mkdir, readdir, copyFile } from 'node:fs/promises';
 import path from 'path';
-import { __dirname, errorMessage } from './utils.js';
+import { __dirname, errorMessage, folderSourse } from './utils.js';
 
 const copy = async () => {
-  const folderSourse = 'files';
   const folderEnd = 'files_copy';
   const folderSoursePath = path.join(__dirname, folderSourse);
   const folderEndPath = path.join(__dirname, folderEnd);
