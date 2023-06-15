@@ -7,6 +7,7 @@ const parseEnv = () => {
       return acc;
     }, [])
     .join('; ');
+
   console.log(envRss);
 };
 
