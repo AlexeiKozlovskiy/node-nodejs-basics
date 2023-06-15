@@ -9,6 +9,7 @@ const calculateHash = async () => {
 
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const filePath = path.join(__dirname, sourse, file);
+
   const content = await readFile(filePath);
   const data = createHash('sha256').update(content).digest('hex');
 
